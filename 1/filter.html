@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../vue1.0.21.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    a: 'abcdscd'
+                }
+
+            });
+        };
+    </script>
+    <title>过滤器</title>
+</head>
+<body>
+
+<div id="box">
+<!--{{'aaa'|uppercase}}-->
+    <!--{{'welcome'|capitalize}}-->
+    <!--{{'WELCOME'|lowercase|capitalize}}-->
+    <!--{{23|currency}}-->
+    {{23|currency '￥'}}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    url:'https://www.baidu.com/img/bd_logo1.png',
+                    w: '200px',
+                    t: '这是一张美丽的图片'
+                },
+                methods: {
+//                    show: function (ev) {
+//                        alert("您按了回车 ");
+//                    }
+                }
+            });
+        };
+    </script>
+    <title>事件深入</title>
+</head>
+<body>
+
+    <div id="box">
+        <!--<div @click="show2()">-->
+            <!--&lt;!&ndash;<input type="button" value="按钮" @click.stop="show()">&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="button" value="按钮" @contextmenu.prevent="show()">&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" @keydown="show($event)">&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" @keyup.13="show()">&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" @keyup.enter="show()">&ndash;&gt;-->
+            <!--<input type="text" @keyup.up="show()">-->
+        <!--</div>-->
+
+        <!--<img v-bind:src="url" align="">-->
+        <!--<img :src="url" align="" :width="w" :title="t">-->
+
+        <strong :class="{red:true}">红色...</strong>
+    </div>
+</body>
+</html>
