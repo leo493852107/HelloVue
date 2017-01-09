@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        leo-red {
+            width:100px;
+            height:100px;
+            background: gray;
+            display: block;
+        }
+    </style>
+    <title>Title</title>
+    <script src="../vue1.0.21.js"></script>
+    <script>
+        Vue.elementDirective('leo-red', {
+            bind: function (color) {
+                this.el.style.background = color;
+            }
+        });
+        window.onload = function () {
+            var vm = new Vue({
+                el: '#box',
+                data: {
+                    a:'blue'
+                },
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <leo-red></leo-red>
+</div>
+<script>
+
+    
+
+</script>
+
+</body>
+</html>

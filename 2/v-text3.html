@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue1.0.21.js"></script>
+</head>
+<body>
+
+<div id="box" v-text="a">
+    {{a}}
+
+    {{aa}}
+</div>
+<script>
+    var vm = new Vue({
+        aa: 11,
+        data: {
+            a: 1
+        },
+    }).$mount('#box');
+
+    vm.$options.show();
+
+    console.log(vm.$options.aa);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue1.0.21.js"></script>
+    <script>
+        Vue.directive('red', function () {
+            this.el.style.background = 'red';
+        });
+        window.onload = function () {
+            var vm = new Vue({
+                el: '#box',
+                data: {
+                    msg:'a'
+                },
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <span v-red>
+        sdfjslf
+    </span>
+</div>
+<script>
+
+    
+
+</script>
+
+</body>
+</html>

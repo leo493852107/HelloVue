@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue1.0.21.js"></script>
+</head>
+<body>
+
+<div id="box">
+    <input type="text" @keyup="show | debounce 2000">
+</div>
+<script>
+    var vm = new Vue({
+        data: {
+
+        },
+        methods: {
+            show: function () {
+                alert(1);
+            }
+        }
+    }).$mount('#box');
+    
+
+</script>
+
+</body>
+</html>

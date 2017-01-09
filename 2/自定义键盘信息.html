@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue1.0.21.js"></script>
+    <script>
+        // ctrl -> 17
+//        document.onkeydown = function (ev) {
+//            console.log(ev.keyCode);
+//        };
+        Vue.directive('on').keyCodes.ctrl = 17; //
+        Vue.directive('on').keyCodes.myenter = 13;
+
+        window.onload = function () {
+            var vm = new Vue({
+                el: '#box',
+                data: {
+                    a:'blue'
+                },
+                methods: {
+                    show: function () {
+                        alert(1)
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <!--<input type="text" @keydown.ctrl="show">-->
+    <input type="text" @keydown.myenter="show | debounce 2000">
+</div>
+<script>
+
+    
+
+</script>
+
+</body>
+</html>
