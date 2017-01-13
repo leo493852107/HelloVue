@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    list: ['width','height','border']
+                },
+                methods: {
+                    add () {
+                        this.list.push('background');
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <input type="button" value="add" @click="add">
+    <ul>
+        <li v-for="(val, index) in list" :key="index">
+            {{val}} {{index}}
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

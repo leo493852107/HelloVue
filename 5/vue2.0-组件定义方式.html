@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script>
+        var Home = { // 2.0组件
+            template:'#aaa'
+        };
+
+//        Vue.component('my-aaa', Home);
+
+
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    msg: 'welcome'
+                },
+                components: {
+                    'aaa': Home
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <template id="aaa">
+        <div>
+            <h3>这是组件</h3>
+            <strong>加粗标签</strong>
+        </div>
+    </template>
+    <div id="box">
+        <aaa></aaa>
+        {{msg}}
+    </div>
+</body>
+</html>

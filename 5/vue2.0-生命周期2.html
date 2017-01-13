@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script>
+
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    msg: 'welcome'
+                },
+                methods: {
+                    update () {
+                        this.msg = '大家好';
+                    }
+                },
+                beforeCreate () {
+                    console.log('组件实例刚刚被创建');
+                },
+                created () {
+                    console.log('实例已经创建完成');
+                },
+                beforeMount () {
+                    console.log('模板编译之前');
+                },
+                mounted () {
+                    console.log('模板编译完成');
+                },
+                beforeUpdate () {
+                    console.log('组件更新之前');
+                },
+                updated () {
+                    console.log('组件更新完毕');
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="update" @click="update">
+        {{msg}}
+    </div>
+</body>
+</html>
